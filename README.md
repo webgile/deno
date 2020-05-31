@@ -1,5 +1,7 @@
 # Deno
+
 Installation
+
 Deno ships as a single executable with no dependencies. You can install it using the installers below, or download a release binary from the releases page.
 
 Shell (Mac, Linux):
