@@ -1,10 +1,9 @@
-import {Application, Router} from "https://deno.land/x/oak/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 import { Client } from "https://deno.land/x/mysql/mod.ts";
 
 const app = new Application();
 const router = new Router();
-app.use(router.allowedMethods());
-
+app.use( router.allowedMethods() );
 
 const client = await new Client().connect({
  hostname: "127.0.0.1",
@@ -12,7 +11,6 @@ const client = await new Client().connect({
  password: "password",
 });
 await client.execute("USE webgile");
-
 
 router
 .get('/',(context)=>{

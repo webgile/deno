@@ -4,6 +4,8 @@ const client = await new Client().connect({
  username: "root",
  password: "password",
 });
+
+
 await client.execute("CREATE DATABASE IF NOT EXISTS webgile");
 await client.execute("USE webgile");
 
@@ -29,4 +31,5 @@ const book = await client.query(
    );
    console.log(book);
 
-   await client.close();
+await client.close();
+
